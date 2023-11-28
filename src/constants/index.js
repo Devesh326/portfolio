@@ -45,16 +45,25 @@ export const features = [
 		id: 'feature-1',
 		icon: star,
 		title: 'Software Development Engineering Intern',
-		content:
-			'The best credit cards offer some tantalizing combinations of promotions and prizes',
+		content: [
+			`Developed a new reward and loyalty feature with Microservices architecture using Golang, Gin-Gonic, and Kafka in collaboration with the backend team`,
+			`Eliminated the use of third-party services, resulting in a huge monetary benefit`,
+			`Successfully ran the scalable system over 1 lakh live customers`,
+			`Overcame the challenge of high latency by working with the team and using Redis, reducing latency by 45%`,
+			`Developed REST apis that were used by all the departments in the company`,
+		],
 		time: 'June, 2023 - August, 2023',
 	},
 	{
 		id: 'feature-2',
 		icon: shield,
 		title: 'Tech Head of DJS Robocon',
-		content:
-			'We take proactive steps make sure your information and transactions are secure.',
+		content: [
+			`Programmed robot's movement using Arduino in C++.`,
+			'Implementing efficient algorithms for complex problem-solving.',
+			`Led a team of 15 to develop and program a robot that finished in 9th place in the DD Robocon competition`,
+			,
+		],
 		time: 'January, 2023 - August, 2023',
 	},
 ]

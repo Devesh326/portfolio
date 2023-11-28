@@ -18,17 +18,21 @@ const FeatureCard = ({ icon, title, content, index, time }) => (
 			</div>
 			<div className='hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700'></div>
 		</div>
-		<div className={`${styles.paragraph} mt-3 sm:pe-8 `}>
+		<div className={`${styles.paragraph} mt-3 sm:pe-8 ml-2 mr-10`}>
 			<h3 className='text-xl font-medium text-gray-900 dark:text-white'>
 				{title}
 			</h3>
 			<time className=' block mb-2 text-sm font-medium leading-none text-gray-400 dark:text-gray-500 my-2'>
 				{time}
 			</time>
-			<p className='text-base font-normal text-gray-500 dark:text-gray-400'>
-				Get started with dozens of web components and interactive elements. Get Get
-				started with dozens of web components and interactive elements. Get
-			</p>
+			{content.map((item) => (
+				<p className='text-base font-normal text-gray-500 dark:text-gray-400 mb-2 max-w-[600px] leading-[26.4px]'>
+					{item}
+				</p>
+			))}
+			{/* <p className='text-base font-normal text-gray-500 dark:text-gray-400'>
+				{content}
+			</p> */}
 		</div>
 	</li>
 )
@@ -49,7 +53,7 @@ const Business = () => (
 		{/* gradient start */}
 		{/* gradient end */}
 
-		<ol className={`items-center sm:flex ${styles.paddingY} leading-[32.4px]`}>
+		<ol className={`items-start sm:flex ${styles.paddingY} leading-[32.4px]`}>
 			{features.map((feature, index) => (
 				<FeatureCard key={feature.id} {...feature} index={index} />
 			))}

@@ -28,6 +28,14 @@ import {
 	SiC,
 	SiSvelte,
 	SiTypescript,
+	SiSpring,
+	SiGo,
+	SiDocker,
+	SiKubernetes,
+	SiRedis,
+	SiApachekafka,
+	SiGooglecloud,
+	SiSelenium,
 } from 'react-icons/si'
 
 function Techstack() {
@@ -44,6 +52,12 @@ function Techstack() {
 				className={`grid md:grid-cols-5 grid-cols-2 sm:grid-cols-3 gap-x-14 gap-y-5 text-right font-poppins text-dimWhite ${styles.marginY}`}
 			>
 				<div className='tech-icons'>
+					<DiJava className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiGo className='m-auto' />
+				</div>
+				<div className='tech-icons'>
 					<CgCPlusPlus className='m-auto ' />
 				</div>
 				<div className='tech-icons'>
@@ -54,9 +68,6 @@ function Techstack() {
 				</div>
 				<div className='tech-icons'>
 					<DiPython className='m-auto' />
-				</div>
-				<div className='tech-icons'>
-					<DiJava className='m-auto' />
 				</div>
 				<div className='tech-icons'>
 					<DiHtml5 className='m-auto' />
@@ -76,7 +87,19 @@ function Techstack() {
 				className={`grid md:grid-cols-5 grid-cols-2 sm:grid-cols-3 gap-x-11 gap-y-5 text-right font-poppins text-dimWhite ${styles.marginY}`}
 			>
 				<div className='tech-icons '>
-					<SiTensorflow className='m-auto' />
+					<SiSpring className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiRedis className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiApachekafka className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiDocker className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiKubernetes className='m-auto' />
 				</div>
 				<div className='tech-icons'>
 					<DiReact className='m-auto' />
@@ -85,19 +108,28 @@ function Techstack() {
 					<DiNodejs className='m-auto' />
 				</div>
 				<div className='tech-icons'>
-					<SiPytorch className='m-auto' />
-				</div>
-				<div className='tech-icons'>
-					<SiSvelte className='m-auto' />
-				</div>
-				<div className='tech-icons'>
 					<SiAmazonaws className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiGooglecloud className='m-auto' />
 				</div>
 				<div className='tech-icons'>
 					<SiFlask className='m-auto' />
 				</div>
 				<div className='tech-icons'>
 					<DiGit className='m-auto' />
+				</div>
+				<div className='tech-icons'>
+					<SiSelenium className='m-auto' />
+				</div>
+				<div className='tech-icons '>
+					<SiTensorflow className='m-auto' />
+				</div>
+				<div className='tech-icons '>
+					<SiArduino className='m-auto' />
+				</div>
+				<div className='tech-icons '>
+					<SiRaspberrypi className='m-auto' />
 				</div>
 			</div>
 

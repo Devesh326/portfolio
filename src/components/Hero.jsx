@@ -21,9 +21,9 @@ const Hero = () => {
 				</div> */}
 
 					<div className='flex flex-row justify-between items-center w-[120%]'>
-						<h1 className='flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] '>
+						<h1 className='flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] pr-10'>
 							Hi! I am <br className='sm:block hidden' />{' '}
-							<span className='text-gradient'>Devesh Agarwal</span>{' '}
+							<span className='text-gradient '>Devesh Agarwal</span>{' '}
 						</h1>
 						{/* <div className='ss:flex hidden md:mr-4 mr-0 '>
 						<GetStarted />
@@ -33,9 +33,12 @@ const Hero = () => {
 					{/* <h1 className='font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full'>
 					Payment Method.
 				</h1> */}
-					<p className={`${styles.paragraph} max-w-[500px] mt-5`}>
-						Our team of experts uses a methodology to identify the credit cards most
-						likely to fit your needs. We examine annual percentage rates, annual fees.
+					<p className={`${styles.paragraph} max-w-[550px] mt-5`}>
+						A full-stack web developer who can blend creativity with technical prowess
+						to build engaging digital experiences. Proficient in Java backend
+						development, I strive for innovation and excellence in every project.
+						Explore my portfolio and witness the fusion of design finesse and robust
+						functionality.
 					</p>
 				</div>
 
@@ -45,7 +48,7 @@ const Hero = () => {
 					<img
 						src={tagImg}
 						alt='billing'
-						className=' w-[90%] h-[100%] relative z-[50] opacity-80 rounded-[10px] '
+						className=' w-[90%] h-[100%] relative z-[50] opacity-90 rounded-[10px] '
 					/>
 
 					{/* gradient start */}
