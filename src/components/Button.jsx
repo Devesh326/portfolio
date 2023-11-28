@@ -45,6 +45,9 @@ export default function Button({ styles }) {
 					<TEModalContent className='bg-black-gradient-2 font-poppins'>
 						<TEModalHeader>
 							<h5 className={style.heading2}>Contact Me</h5>
+							<div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient' />
+							<div className='absolute z-[0] w-[50%] h-[50%] -right-24 bottom-20 blue__gradient' />
+
 							<button
 								type='button'
 								className={` ${style.paragraph} box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none`}

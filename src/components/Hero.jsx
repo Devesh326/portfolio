@@ -60,9 +60,14 @@ const Hero = () => {
 					{/* gradient end */}
 				</div>
 			</section>
-			<div className={` ${styles.flexCenter} mb-20 `}>
-				<GetStarted />
-			</div>
+			<a
+				href='https://devesh326.github.io/portfolio/folder/devesh_agarwal_resume.pdf'
+				target='_blank'
+			>
+				<div className={` ${styles.flexCenter} mb-20 `}>
+					<GetStarted />
+				</div>
+			</a>
 		</>
 	)
 }

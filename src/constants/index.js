@@ -16,6 +16,7 @@ import {
 } from '../assets'
 
 import contest_arena from '../assets/contest_arena.png'
+import trinity from '../assets/Trinity.png'
 
 export const navLinks = [
 	{
@@ -72,28 +73,27 @@ export const feedback = [
 	{
 		id: 'feedback-1',
 		content:
-			'Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.',
+			'Created and published a website that aggregates coding contests from various coding platforms, helping candidates stay up-to-date on coding contests and participate in them',
 		title: 'Contest Arena',
 		img: contest_arena,
-		tech: ['AWS', 'GCP', 'React.js', 'MongoDB', 'Redis'],
+		tech: ['AWS', 'GCP', 'React.js', 'MongoDB', 'Redis', 'Selenium'],
 		link: 'https://contests-arena.netlify.app/',
 	},
 	{
 		id: 'feedback-2',
-		content:
-			"Money makes your life easier. If you're lucky to have it, you're lucky.",
+		content: "Developed 	a website for Trinity, College's annual fest.",
 		title: 'Trinity',
-		img: '',
-		tech: ['AWS', 'GCP', 'React.js', 'MongoDB', 'Redis'],
-		link: '',
+		img: trinity,
+		tech: ['React.js', 'Firebase', 'Node.js', 'SEO'],
+		link: 'https://djstrinity.in/',
 	},
 	{
 		id: 'feedback-3',
 		content:
-			'It is usually people in the money business, finance, and international trade that are really rich.',
-		title: 'Founder & Leader',
+			'Quick Bus is a MERN stack web application that enable passengers to book bus seats and travel agencies to add new buses.',
+		title: 'Quick Bus',
 		img: '',
-		tech: [],
+		tech: ['React.js', 'MongoDB', 'Nodemailer'],
 		link: '',
 	},
 ]

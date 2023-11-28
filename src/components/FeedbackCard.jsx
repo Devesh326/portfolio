@@ -2,7 +2,7 @@ import { quotes } from '../assets'
 import styles from '../style'
 
 const FeedbackCard = ({ content, title, img, tech, link }) => (
-	<div className='flex justify-between flex-col px-10 py-12 rounded-[20px]  max-w-[400px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card'>
+	<div className='flex justify-items-start flex-col  px-10 py-12 rounded-[20px]  max-w-[400px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card'>
 		{/* add the image thats required */}
 		<a href={link} target='_blank'>
 			<img
@@ -17,7 +17,7 @@ const FeedbackCard = ({ content, title, img, tech, link }) => (
 			{title}
 		</p>
 		<p
-			className={`font-poppins font-normal text-[18px] leading-[32.4px]  my-10 ${styles.paragraph}`}
+			className={`font-poppins font-normal text-[18px] leading-[32.4px] min-h-[200px] my-10 ${styles.paragraph}`}
 		>
 			{content}
 		</p>
