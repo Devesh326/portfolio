@@ -25,6 +25,12 @@ import {
 } from 'tw-elements-react'
 
 export default function Button({ styles }) {
+	const handleCLick = (e) => {
+		e.preventDefault()
+		alert('Thank you for contacting me. I will get back to you soon.')
+		setShowModal(false)
+	}
+
 	const [showModal, setShowModal] = useState(false)
 	return (
 		<div>
@@ -70,8 +76,10 @@ export default function Button({ styles }) {
 								</svg>
 							</button>
 						</TEModalHeader>
-						<form class={`p-4 md:p-5`}>
-							<div className={`${style.paragraph} grid gap-4 mb-4 grid-cols-2 `}>
+						<form className={`p-4 md:p-5 z-[10]`}>
+							<div
+								className={`${style.paragraph} grid gap-4 mb-4 grid-cols-2 z-[100]`}
+							>
 								<div class='col-span-2'>
 									<label for='name' class='block mb-2 text-white'>
 										Name
@@ -127,6 +135,7 @@ export default function Button({ styles }) {
 							<button
 								type='submit'
 								className={`text-[14px] md:text-[18px] py-2 px-6 font-poppins font-medium text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}
+								onClick={handleCLick}
 							>
 								Submit
 							</button>
