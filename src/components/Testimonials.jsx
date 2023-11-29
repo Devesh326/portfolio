@@ -18,8 +18,16 @@ const Testimonials = () => (
 				<p className={`${styles.paragraph} max-w-[450px]`}>
 					{/* Everything you need to accept card payments and grow your business anywhere
 					on the planet. */}
-					A few of the projects I have made recently, checkout my Github Profile for
-					more.
+					A few of the projects I have made recently, checkout my
+					<a
+						href='https://github.com/Devesh326'
+						class='font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline'
+						data-popover-target='popover-image'
+						target='_blank'
+					>
+						{` Github `}
+					</a>
+					Profile for more.
 				</p>
 			</div>
 		</div>

@@ -61,7 +61,7 @@ const Hero = () => {
 				</div>
 			</section>
 			<a
-				href='https://devesh326.github.io/portfolio/files/Devesh_Agarwal_Resume.pdf'
+				href='https://drive.google.com/file/d/1Zb8BkWCveY2lkYsJcL9rs8-bEkrGj9dy/view?usp=sharing'
 				target='_blank'
 			>
 				<div className={` ${styles.flexCenter} mb-20 `}>
