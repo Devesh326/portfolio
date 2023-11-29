@@ -3,11 +3,11 @@ import styles, { layout } from '../style'
 import Button from './Button'
 
 const FeatureCard = ({ icon, title, content, index, time }) => (
-	<li className='relative mb-6 sm:mb-0 max-w-2xl '>
+	<li className='relative mb-6 sm:mb-0 max-w-2xl z-[100]'>
 		<div className='flex items-center'>
-			<div className='z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0'>
+			<div className='z-10 flex items-center justify-center w-6 h-6  rounded-full ring-0  bg-blue-900 sm:ring-8 ring-gray-900 shrink-0'>
 				<svg
-					className='w-2.5 h-2.5 text-blue-800 dark:text-blue-300'
+					className='w-2.5 h-2.5 text-blue-300'
 					aria-hidden='true'
 					xmlns='http://www.w3.org/2000/svg'
 					fill='currentColor'
@@ -19,15 +19,13 @@ const FeatureCard = ({ icon, title, content, index, time }) => (
 			<div className='hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700'></div>
 		</div>
 		<div className={`${styles.paragraph} mt-3 sm:pe-8 mr-10`}>
-			<h3 className='text-xl font-medium text-gray-900 dark:text-white'>
-				{title}
-			</h3>
-			<time className=' block mb-2 text-sm font-medium leading-none text-gray-400 dark:text-gray-500 my-2'>
+			<h3 className='text-xl font-medium text-white'>{title}</h3>
+			<time className=' block mb-2 text-sm font-medium leading-none text-gray-400 my-2'>
 				{time}
 			</time>
 			<ul className='pl-5'>
 				{content.map((item) => (
-					<li className=' list-disc text-base font-normal text-gray-500 dark:text-gray-400 mb-2 max-w-[600px] leading-[26.4px] '>
+					<li className=' list-disc text-base font-normal text-gray-500  mb-2 max-w-[600px] leading-[26.4px] '>
 						{item}
 					</li>
 				))}
@@ -55,7 +53,9 @@ const Business = () => (
 		{/* gradient start */}
 		{/* gradient end */}
 
-		<ol className={`items-start sm:flex ${styles.paddingY} leading-[32.4px]`}>
+		<ol
+			className={`items-start sm:flex ${styles.paddingY} leading-[32.4px] z-[100]`}
+		>
 			{features.map((feature, index) => (
 				<FeatureCard key={feature.id} {...feature} index={index} />
 			))}
