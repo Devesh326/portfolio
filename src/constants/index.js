@@ -17,6 +17,7 @@ import {
 
 import contest_arena from '../assets/contest_arena.png'
 import trinity from '../assets/Trinity.png'
+import Quick_Bus from '../assets/Quick_Bus.png'
 
 export const navLinks = [
 	{
@@ -92,9 +93,9 @@ export const feedback = [
 		content:
 			'Quick Bus is a MERN stack web application that enable passengers to book bus seats and travel agencies to add new buses.',
 		title: 'Quick Bus',
-		img: '',
+		img: Quick_Bus,
 		tech: ['React.js', 'MongoDB', 'Nodemailer'],
-		link: '',
+		link: 'https://github.com/bhavikjain403/TIAA-Team2',
 	},
 ]
 
