@@ -13,7 +13,7 @@
 
 import React, { useState } from 'react'
 import style from '../style'
-// import dotenv from 'dotenv'
+import dotenv from 'dotenv'
 
 import {
 	TERipple,
@@ -31,12 +31,13 @@ export default function Button({ styles }) {
 	const [subject, setSubject] = useState('')
 	const [description, setDescription] = useState('')
 
-	// const FIREBASE_URL = process.env.FIREBASE_URL
+	const FIREBASE_URL = process.env.FIREBASE_URL
 
 	const handleCLick = async (e) => {
 		e.preventDefault()
 		const data = { name, email, subject, description }
 		console.log(JSON.stringify(data))
+		console.log(FIREBASE_URL)
 		// await fetch(
 		// 	'https://portfolio-contact-865da-default-rtdb.firebaseio.com/contact.json',
 		// 	{
