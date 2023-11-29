@@ -31,7 +31,7 @@ export default function Button({ styles }) {
 	const [description, setDescription] = useState('')
 
 	const FIREBASE_URL = import.meta.env.VITE_FIREBASE_URL
-	console.log(FIREBASE_URL, import.meta.env)
+	console.log(import.meta.env)
 
 	const handleCLick = async (e) => {
 		e.preventDefault()
