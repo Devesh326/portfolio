@@ -30,21 +30,21 @@ export default function Button({ styles }) {
 	const [subject, setSubject] = useState('')
 	const [description, setDescription] = useState('')
 
+	const FIREBASE_URL = import.meta.env.VITE_FIREBASE_URL
+	console.log(FIREBASE_URL, import.meta.env)
+
 	const handleCLick = async (e) => {
 		e.preventDefault()
+
 		const data = { name, email, subject, description }
 		console.log(JSON.stringify(data))
-		console.log(FIREBASE_URL)
-		await fetch(
-			'https://portfolio-contact-865da-default-rtdb.firebaseio.com/contact.json',
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(data),
+		await fetch(FIREBASE_URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
 			},
-		)
+			body: JSON.stringify(data),
+		})
 			.then((res) => {
 				console.log(res)
 			})
