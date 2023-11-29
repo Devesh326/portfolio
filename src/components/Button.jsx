@@ -13,6 +13,7 @@
 
 import React, { useState } from 'react'
 import style from '../style'
+import dotenv from 'dotenv'
 
 import {
 	TERipple,
@@ -25,9 +26,34 @@ import {
 } from 'tw-elements-react'
 
 export default function Button({ styles }) {
-	const handleCLick = (e) => {
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
+	const [subject, setSubject] = useState('')
+	const [description, setDescription] = useState('')
+
+	const FIREBASE_URL = process.env.FIREBASE_URL
+
+	const handleCLick = async (e) => {
 		e.preventDefault()
-		alert('Thank you for contacting me. I will get back to you soon.')
+		const data = { name, email, subject, description }
+		console.log(JSON.stringify(data))
+		await fetch(FIREBASE_URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+		})
+			.then((res) => {
+				console.log(res)
+			})
+			.catch((err) => {
+				console.log(err)
+			})
+		setName('')
+		setEmail('')
+		setSubject('')
+		setDescription('')
 		setShowModal(false)
 	}
 
@@ -76,7 +102,7 @@ export default function Button({ styles }) {
 								</svg>
 							</button>
 						</TEModalHeader>
-						<form className={`p-4 md:p-5 z-[10]`}>
+						<form className={`p-4 md:p-5 z-[10]`} onSubmit={handleCLick}>
 							<div
 								className={`${style.paragraph} grid gap-4 mb-4 grid-cols-2 z-[100]`}
 							>
@@ -90,7 +116,9 @@ export default function Button({ styles }) {
 										id='name'
 										class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
 										placeholder='Type your name'
-										required=''
+										onChange={(e) => setName(e.target.value)}
+										value={name}
+										required
 									/>
 								</div>
 								<div class='col-span-2'>
@@ -103,7 +131,9 @@ export default function Button({ styles }) {
 										id='email'
 										class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
 										placeholder='Type your email'
-										required=''
+										onChange={(e) => setEmail(e.target.value)}
+										value={email}
+										required
 									/>
 								</div>
 								<div class='col-span-2'>
@@ -116,7 +146,9 @@ export default function Button({ styles }) {
 										id='subject'
 										class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
 										placeholder='Type subject'
-										required=''
+										onChange={(e) => setSubject(e.target.value)}
+										value={subject}
+										required
 									/>
 								</div>
 
@@ -129,13 +161,15 @@ export default function Button({ styles }) {
 										rows='4'
 										class='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 										placeholder='Type message to send'
+										onChange={(e) => setDescription(e.target.value)}
+										value={description}
+										required
 									></textarea>
 								</div>
 							</div>
 							<button
 								type='submit'
 								className={`text-[14px] md:text-[18px] py-2 px-6 font-poppins font-medium text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}
-								onClick={handleCLick}
 							>
 								Submit
 							</button>

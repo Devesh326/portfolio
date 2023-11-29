@@ -1,6 +1,7 @@
 import styles from '../style'
 import { logo } from '../assets'
 import { footerLinks, socialMedia } from '../constants'
+import { SiLeetcode, SiGithub, SiLinkedin } from 'react-icons/si'
 
 const Footer = () => (
 	<section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
@@ -47,8 +48,8 @@ const Footer = () => (
 				ⒸDevesh Agarwal : 2023
 			</p>
 
-			<div className='flex flex-row md:mt-0 mt-6'>
-				{socialMedia.map((social, index) => (
+			<div className='font-poppins flex flex-row md:mt-0 mt-6 text-white'>
+				{/* {socialMedia.map((social, index) => (
 					<img
 						key={social.id}
 						src={social.icon}
@@ -58,7 +59,23 @@ const Footer = () => (
 						}`}
 						onClick={() => window.open(social.link)}
 					/>
-				))}
+				))} */}
+				cuppcake326@gmail.com {'  '}
+				<span className='ml-3'> | </span>
+				<a href='https://leetcode.com/agarwaldevesh326/' target='_blank'>
+					<SiLeetcode className='w-[21px] h-[21px] object-contain cursor-pointer mr-3 ml-3' />
+				</a>
+				|
+				<a href='https://github.com/Devesh326' target='_blank'>
+					<SiGithub className='w-[21px] h-[21px] object-contain cursor-pointer mr-3 ml-3' />
+				</a>
+				|
+				<a
+					href='https://www.linkedin.com/in/devesh-agarwal-link8421/'
+					target='_blank'
+				>
+					<SiLinkedin className='w-[21px] h-[21px] object-contain cursor-pointer mr-3 ml-3' />
+				</a>
 			</div>
 		</div>
 	</section>
