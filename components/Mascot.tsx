@@ -82,7 +82,7 @@ export function Mascot() {
           {(["idle", "wave", "strum"] as const).map((frame) => (
             <img
               key={frame}
-              src={`/mascot/${frame}.webp`}
+              src={`/portfolio/mascot/${frame}.webp`}
               alt=""
               className={pose === frame ? "active" : ""}
               draggable={false}
