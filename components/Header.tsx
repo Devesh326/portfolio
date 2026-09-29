@@ -11,7 +11,7 @@ export function Header({ active }: { active?: "work" | "about" }) {
         <nav className="main-nav" aria-label="Main navigation">
           <Link href="/work/" aria-current={active === "work" ? "page" : undefined}>Work</Link>
           <Link href="/about/" aria-current={active === "about" ? "page" : undefined}>About</Link>
-          <a href="/#contact">Contact</a>
+          <Link href="/#contact">Contact</Link>
         </nav>
         <a className="header-cta" href="mailto:agarwaldevesh326@gmail.com">Let&apos;s connect <span aria-hidden="true">↗</span></a>
       </div>

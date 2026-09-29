@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type Pose = "idle" | "wave" | "strum";
 
 const moments: { pose: Pose; message: string }[] = [
@@ -82,7 +84,7 @@ export function Mascot() {
           {(["idle", "wave", "strum"] as const).map((frame) => (
             <img
               key={frame}
-              src={`/portfolio/mascot/${frame}.webp`}
+              src={`${basePath}/mascot/${frame}.webp`}
               alt=""
               className={pose === frame ? "active" : ""}
               draggable={false}
