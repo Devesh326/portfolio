@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.npm-cache/
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+.source-store/
+.source-repo/
+.push-site.ps1
+.site-build.tar
